@@ -1,0 +1,8 @@
+<% if (!user) { %>
+	<h2>Welcome! Please <a href="/auth/openid">log in</a>.</h2>
+<% } else { %>
+	<h2>Hello! You are logged in.</h2>
+	<samp>
+		 <%= JSON.stringify(user) %>
+	</samp>
+<% } %>

@@ -1,0 +1,34 @@
+{
+  "name": "passport-presspass",
+  "version": "0.0.1",
+  "description": "PressPass OAuth2 + OIDC strategy for Passport.",
+  "keywords": [
+    "passport",
+    "presspass",
+    "news",
+    "newscatalyst",
+    "authentication",
+    "identity"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/news-catalyst/passport-presspass.git"
+  },
+  "bugs": {
+    "url": "http://github.com/news-catalyst/passport-presspass/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib/",
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "dependencies": {
+    "passport": "^0.4.1",
+    "passport-openidconnect": "0.0.2"
+  }
+}
