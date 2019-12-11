@@ -17,7 +17,7 @@ passport.deserializeUser(function(identifier, done) {
 
 passport.use(new PressPassStrategy({
     pressPassBase: "http://dev.squarelet.com/", // or omit; this is helpful for development
-    clientID: '<your client secret>',
+    clientID: '<your client id>',
     callbackURL: 'http://localhost:3000/auth/openid/return',
   },
   function(iss, sub, profile, verified) {
