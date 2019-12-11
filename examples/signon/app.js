@@ -17,10 +17,10 @@ passport.deserializeUser(function(identifier, done) {
 
 passport.use(new PressPassStrategy({
     pressPassBase: "http://dev.squarelet.com/", // or omit; this is helpful for development
-    clientID: '<your client id>',
+    clientID: '784506',
     callbackURL: 'http://localhost:3000/auth/openid/return',
   },
-  function(iss, sub, profile, verified) {
+  function(issuer, userId, profile, verified) {
     process.nextTick(function () {
       return verified(null, profile)
     });
@@ -44,13 +44,13 @@ app.get('/', function(req, res){
   res.render('index', { user: req.user });
 });
 
-app.get('/auth/openid', 
+app.get('/auth/openid',
   passport.authenticate('presspass', { failureRedirect: '/login' }),
   function(req, res) {
     res.redirect('/');
   });
 
-app.get('/auth/openid/return', 
+app.get('/auth/openid/return',
   passport.authenticate('presspass', { failureRedirect: '/login' }),
   function(req, res) {
     res.redirect('/');
